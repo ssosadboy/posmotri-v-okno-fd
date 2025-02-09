@@ -61,12 +61,13 @@ ol {
   align-self: center;
   display: grid;
   grid-template-areas: "result" "content__details";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 711px 399px;
   gap: 30px;
 }
 
 .search-form {
   display: flex;
+  gap: 40px;
   align-items: center;
   justify-content: space-between;
 }
@@ -74,7 +75,6 @@ ol {
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
-  position: relative;
 }
 
 .content__details {
@@ -118,6 +118,7 @@ ol {
 
 .content__video-card {
   display: flex;
+  justify-content: start;
   width: 100%;
 }
 
@@ -193,10 +194,9 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -233,8 +233,14 @@ ol {
   border-left: none;
   border-right: none;
   appearance: none;
+  -webkit-appearance: none;
   color: #fff;
   min-width: 225px;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
 }
 
 .search-form__textfield:focus {
@@ -245,15 +251,15 @@ ol {
   outline: 1px solid white;
   outline-offset: 2px;
 }
+
 .search-form__pseudo-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid white;
   width: 19px;
   height: 19px;
   margin-right: 5px;
-  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -263,12 +269,15 @@ ol {
   height: 15px;
   background-color: white;
 }
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   display: block;
 }
+
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
+
 .button {
   border: 1px solid white;
   background-color: transparent;
@@ -276,7 +285,7 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  min-height: 34px;
+  height: 34px;
   line-height: 21.6px;
   text-align: center;
   cursor: pointer;
