@@ -149,7 +149,6 @@ ol {
   flex-grow: 1;
   max-width: 196px;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .content__card-link {
@@ -198,6 +197,8 @@ ol {
   line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  overflow: hidden;
+
 }
 
 .visually-hidden {
@@ -246,6 +247,9 @@ ol {
   outline-offset: 2px;
 }
 .search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   border: 1px solid white;
   width: 19px;
   height: 19px;
