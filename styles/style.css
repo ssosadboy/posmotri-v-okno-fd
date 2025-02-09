@@ -116,9 +116,7 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-.preloader {
-  position: absolute;
-}
+
 .content__video-card {
   display: flex;
   justify-content: start;
