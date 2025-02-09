@@ -17,6 +17,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-items: center;
+  block-size: 800px;
 }
 
 h1,
@@ -60,9 +63,9 @@ ol {
 .content {
   align-self: center;
   display: grid;
-  grid-template-areas: "result" "content__details";
   grid-template-columns: 711px 399px;
   gap: 30px;
+  padding: 0 30px;
 }
 
 .search-form {
