@@ -75,6 +75,7 @@ ol {
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .content__details {
@@ -115,7 +116,9 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-
+.preloader {
+  position: absolute;
+}
 .content__video-card {
   display: flex;
   justify-content: start;
